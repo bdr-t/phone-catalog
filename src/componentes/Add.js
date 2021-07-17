@@ -27,7 +27,7 @@ const Add = () => {
   return (
     <>
       <Button ref={btnRef} colorScheme="blue" onClick={onOpen}>
-        Open
+        Add
       </Button>
       <Drawer
         isOpen={isOpen}
