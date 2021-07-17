@@ -12,10 +12,6 @@ import {
   Stack,
   Box,
   FormLabel,
-  InputGroup,
-  InputLeftAddon,
-  InputRightAddon,
-  Select,
   Textarea,
 } from "@chakra-ui/react";
 
