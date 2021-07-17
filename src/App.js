@@ -1,17 +1,17 @@
 import HomePage from "./componentes/HomePage";
-import Add from "./componentes/Add"
+import Add from "./componentes/Add";
 import SearchBar from "./componentes/SearchBar";
-import {
-  Center,
-} from "@chakra-ui/react";
-
+import { Center, Flex } from "@chakra-ui/react";
 
 function App() {
   return (
     <>
-      <SearchBar/>
-      <Add/>
-      <Center>
+        <Flex justify="center" align="center">
+          <SearchBar />
+          <Add />
+        </Flex>
+
+      <Center justify="center">
         <HomePage />
       </Center>
     </>

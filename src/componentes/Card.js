@@ -8,22 +8,18 @@ import {
   HStack,
   Box,
   Badge,
-  Flex,
-  Collapse,
-  useDisclosure,
-  Lorem,
   Slide,
 } from "@chakra-ui/react";
-// import { CgScreenShot } from "react-icons/cg";
-// import { CgSmartphoneRam } from "react-icons/cg";
-// import { FiCpu } from "react-icons/fi";
+import { CgScreenShot } from "react-icons/cg";
+import { CgSmartphoneRam } from "react-icons/cg";
+import { FiCpu } from "react-icons/fi";
 
 import {useState} from 'react'
 
 const Card = () => {
   const [ isOpen, setIsOpen ] = useState();
   return (
-    <div>
+    <>
       <VStack
         onClick={()=> setIsOpen(!isOpen)}
         _hover={{
@@ -36,12 +32,13 @@ const Card = () => {
         position="relative"
         bg="gray.200"
         w="220px"
-        h="320px"
+        h="340px"
         mb="10"
         mt="10"
         borderRadius="base"
         pb="5"
         boxShadow="md"
+        justifySelf= 'center'
       >
         <Center mt="-40px">
           <Image
@@ -52,10 +49,10 @@ const Card = () => {
         </Center>
         <VStack className="card" position="absolute" mt="200px">
           <Heading as="h2" size="lg" color="blue.700">
-            Galaxy S21
+            iPhone 12
           </Heading>
           <Badge variant="outline" fontSize="14px" color="blue.900" m="0">
-            Samsung
+            Apple
           </Badge>
           <HStack>
             <Circle size="15px" bg="tomato" cursor="pointer"></Circle>
@@ -64,22 +61,22 @@ const Card = () => {
             <Circle size="15px" bg="black" cursor="pointer"></Circle>
           </HStack>
 
-          {/* <Flex>
-            <CgScreenShot/>
-            <p>screen</p>
-          </Flex>
-          <Flex>
+          <HStack gap='4px'>
+            <CgScreenShot className="icon"/>
+            <p>6.1 inches</p>
+          </HStack>
+          <HStack gap='4px'>
             <CgSmartphoneRam className="icon" />
-            <p>ram GB</p>
-          </Flex>
-          <Flex>
+            <p>8 GB </p>
+          </HStack>
+          <HStack gap='4px'>
             <FiCpu className="icon" />
-            <p>procesor</p>
-          </Flex> */}
+            <p>A14 bionic</p>
+          </HStack>
 
-          <Heading as="h3" size="md" color="blue.900" m="0">
+          <Badge fontSize='20px' fontWeight='regular'color="white" colorScheme="teal" variant='solid'>
             900€
-          </Heading>
+          </Badge>
         </VStack>
       </VStack>
 
@@ -97,7 +94,7 @@ const Card = () => {
         </Box>
       </Slide>
       )}
-    </div>
+      </>
   );
 };
 

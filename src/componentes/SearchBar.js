@@ -10,7 +10,13 @@ import { SearchIcon } from "@chakra-ui/icons";
 const SearchBar = () => {
   return (
     <Center>
-      <InputGroup w="50%" m="10">
+      <InputGroup w={{
+        sm: "200px",
+        md: "300px",
+        lg: "400px",
+        xl: "500px",
+        "2xl": "600px", // 80em+
+      }} m="10">
         <InputRightElement
           pointerEvents="none"
           children={
